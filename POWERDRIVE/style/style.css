@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
+
+:root{
+    --cor-primaria:#a9a9a9;
+    --cor-secundaria: #00a86b;
+    --cor-ternaria: #F6F6F6 ;
+    --cor-hover: #272727;
+    --cor-button: #007BFF;
+    --cor-button-hover:#0056b3;
+    --font-primaria: "Montserrat", sans-serif;
+    --font-secundaria: "Krona One", sans-serif;
+}
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--cor-ternaria);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header */
+header {
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+    padding: 20px;
+    text-align:left;
+}
+
+/* Titulo - Login Cadastro */
+.title-container {
+    text-align:center;
+    padding: 10px;
+}
+
+/* Paragrafo - Login Cadastro */
+.paragrafo-container {
+    text-align: center;
+    padding: 10px;
+}
+
+/* Container */
+.container {
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin-top: 40px;
+}
+
+/* Input Group */
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.input-group input, 
+.input-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Button */
+.btn-primary {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--cor-button);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: var(--cor-button-hover);
+}
+
+/* Footer */
+footer {
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+    text-align: center;
+    padding: 10px;
+    margin-top: auto;
+}
+
+/* Container para a dashboard */
+.dashboard-container {
+    display: flex;
+    flex-grow: 1;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 200px;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 15px;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+}
+
+.sidebar ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Main Content */
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #fff;
+}
+
