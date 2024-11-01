@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Usuário - Minha Aplicação</title>
+    <link rel="stylesheet" href="style/style.css">
+    <script src="scripts/include.js" defer></script>
+    <script src="scripts/validar_formulario.js" defer></script>
+</head>
+<body>
+    <!-- Header -->
+    <div include-html="header.html"></div>
+
+    <!-- Cadastro Form -->
+    <div class="container">
+        <h2 class="title-container">Cadastro de Usuário</h2>
+        <form id="cadastro-form" onsubmit="return validarFormulario()">
+            <div class="input-group">
+                <label for="tipo-cadastro">Tipo de Cadastro</label>
+                <select id="tipo-cadastro" name="tipo-cadastro" onchange="mostrarCampos()" required>
+                    <option value="">Selecione</option>
+                    <option value="fisica">Pessoa Física</option>
+                    <option value="juridica">Pessoa Jurídica</option>
+                </select>
+                <span class="error" id="tipo-error"></span>
+            </div>
+
+            <!-- Campos para Pessoa Física -->
+            <div id="campos-fisica" style="display: none;">
+                <div class="input-group">
+                    <label for="nome">Nome Completo</label>
+                    <input type="text" id="nome" name="nome">
+                    <span class="error" id="nome-error"></span>
+                </div>
+                <div class="input-group">
+                    <label for="cpf">CPF</label>
+                    <input type="text" id="cpf" name="cpf" oninput="formatarCPF(this)">
+                    <span class="error" id="cpf-error"></span>
+                </div>
+                <div class="input-group">
+                    <label for="nascimento">Data de Nascimento</label>
+                    <input type="date" id="nascimento" name="nascimento">
+                    <span class="error" id="nascimento-error"></span>
+                </div>
+            </div>
+
+            <!-- Campos para Pessoa Jurídica -->
+            <div id="campos-juridica" style="display: none;">
+                <div class="input-group">
+                    <label for="razao-social">Razão Social</label>
+                    <input type="text" id="razao-social" name="razao-social">
+                    <span class="error" id="razao-error"></span>
+                </div>
+                <div class="input-group">
+                    <label for="cnpj">CNPJ</label>
+                    <input type="text" id="cnpj" name="cnpj" oninput="formatarCNPJ(this)">
+                    <span class="error" id="cnpj-error"></span>
+                </div>
+                <div class="input-group">
+                    <label for="responsavel">Nome do Responsável</label>
+                    <input type="text" id="responsavel" name="responsavel">
+                    <span class="error" id="responsavel-error"></span>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+                <span class="error" id="email-error"></span>
+            </div>
+            <div class="input-group">
+                <label for="password">Senha</label>
+                <input type="password" id="password" name="password" required>
+                <span class="error" id="password-error"></span>
+            </div>
+            <div class="input-group">
+                <label for="confirm-password">Confirme a Senha</label>
+                <input type="password" id="confirm-password" name="confirm-password" required>
+                <span class="error" id="confirm-password-error"></span>
+            </div>
+
+            <button type="submit" class="btn-primary">Cadastrar</button>
+        </form>
+        <p class="paragrafo-container">Já tem uma conta? <a href="index.html">Faça login</a></p>
+    </div>
+
+    <!-- Footer -->
+    <div include-html="footer.html"></div>
+</body>
+</html>

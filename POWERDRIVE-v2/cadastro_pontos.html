@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Pontos de Recarga</title>
+    <link rel="stylesheet" href="style/style.css">
+    <script src="scripts/include.js" defer></script>
+</head>
+<body>
+    <!-- Header -->
+    <div include-html="header.html"></div>
+
+    <!-- Dashboard Layout -->
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <nav class="sidebar">
+            <ul>
+                <li><a href="cadastro_pontos.html">Cadastro de Pontos de Recarga</a></li>
+                <li><a href="index.html">Logoff</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <h2>Cadastro de Pontos de Recarga</h2>
+            <form action="#" method="POST">
+                <div class="input-group">
+                    <label for="nome-ponto">Nome do Ponto de Recarga</label>
+                    <input type="text" id="nome-ponto" name="nome-ponto" required>
+                </div>
+                <div class="input-group">
+                    <label for="localizacao">Localização</label>
+                    <input type="text" id="localizacao" name="localizacao" required>
+                </div>
+                <div class="input-group">
+                    <label for="descricao">Descrição</label>
+                    <textarea id="descricao" name="descricao" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn-primary">Cadastrar Ponto</button>
+            </form>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <div include-html="footer.html"></div>
+</body>
+</html>
